@@ -25,7 +25,7 @@ app.all('*',(req,res)=>{
     res.status(404).send({"message":`not a valid url ${req.originalUrl}`})
 })
 
-mongoose.connect("mongodb://127.0.0.1:27017/doctorsapp").then(()=>{
+mongoose.connect("mongodb+srv://chiragkocher2002:dwAyt0E9oFXvwMsZ@doctorproject.azhmpw6.mongodb.net/doctorsapp?retryWrites=true&w=majority&appName=doctorproject").then(()=>{
     console.log("connected to mongoDB");
 }).catch((err)=>{
     console.log(err);
